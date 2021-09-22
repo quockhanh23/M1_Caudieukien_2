@@ -9,11 +9,14 @@
 <body>
 <h1>Do you love me?</h1>
 <button onclick="alert('<3')">yes</button>
-<button onmouseover="()" >No</button>
+<button onmouseover="nhap()" style="position: relative;" id="nhe">No</button>
 </body>
 </html>
 <script>
-    function () {
-
+    function nhap() {
+        let x = Math.random() * window.innerWidth
+        let y = Math.random() * window.innerHeight
+        document.getElementById('nhe').style.left = x + "px"
+        document.getElementById('nhe').style.top = y + "px"
     }
 </script>

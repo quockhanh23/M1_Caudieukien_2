@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài tập máy tính đơn giản </title>
+  <style>
+    button {
+      width: 60px;
+      height: 60px;
+    }
+    table {
+      width: 300px;
+      height: 400px;
+      border: 15px solid blue;
+    }
+    #mh {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <tr>
+    <td colspan="4">
+      <input id="mh" style="width:265px;height: 30px"  type="text">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button onclick="addText('1')">1</button>
+    </td>
+    <td>
+      <button onclick="addText('2')" >2</button>
+    </td>
+    <td>
+      <button onclick="addText('3')" >3</button>
+    </td>
+    <td>
+      <button onclick="addText('+')" >+</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button onclick="addText('4')" >4</button>
+    </td>
+    <td>
+      <button onclick="addText('5')" >5</button>
+    </td>
+    <td>
+      <button onclick="addText('6')" >6</button>
+    </td>
+    <td>
+      <button onclick="addText('-')" >-</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button onclick="addText('7')" >7</button>
+    </td>
+    <td>
+      <button onclick="addText('8')" >8</button>
+    </td>
+    <td>
+      <button onclick="addText('9')" >9</button>
+    </td>
+    <td>
+      <button onclick="addText('*')" >x</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button onclick="resetmh()" >C</button>
+    </td>
+    <td>
+      <button onclick="addText('0')" >0</button>
+    </td>
+    <td>
+      <button onclick="cal()" >=</button>
+    </td>
+    <td>
+      <button onclick="addText('/')" >/</button>
+    </td>
+  </tr>
+</table>
+<script>
+  function addText(txt) {
+    document.getElementById("mh").value += txt;
+  }
+  function resetmh() {
+    document.getElementById("mh").value = "";
+  }
+  function cal() {
+    let kq = document.getElementById("mh").value;
+    document.getElementById("mh").value = eval(kq);
+  }
+</script>
+
+</body>
+</html>
